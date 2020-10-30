@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function PropertyCard() {
   return (
-    <div className="w-full md:w-4/12 px-4 cursor-pointer">
+    <div className="w-full md:w-6/12 lg:w-4/12 px-4 cursor-pointer">
       <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg overflow-hidden">
         <Image
           src="/images/test.jpg"
