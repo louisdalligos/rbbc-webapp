@@ -63,11 +63,10 @@ export default function Navbar() {
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
             <li className="flex items-center">
                 <a
-                  className="hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="#"
-                  target="_blank"
+                  className="hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold flex justify-content align-center ml-2"
+                  href="tel:+63 922 8882298"
                 >
-                  <span className="flex justify-content align-center ml-2"><i className="fas fa-phone-square-alt text-green-500 text-2xl mr-2"></i><a className="mt-1" href="tel:+63 922 8882298">+63 977 8340256</a></span>
+                  <i className="fas fa-phone-square-alt text-green-500 text-2xl mr-2"></i><span>+63 977 8340256</span>
                 </a>
               </li>
               <li className="flex items-center">
