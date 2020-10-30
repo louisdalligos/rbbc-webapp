@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="350" viewBox="0 0 1640 350">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 375px;
+      }
+
+      .cls-1, .cls-3 {
+        font-family: Marion;
+      }
+
+      .cls-2 {
+        fill: #159f2f;
+      }
+
+      .cls-3 {
+        font-size: 75px;
+      }
+    </style>
+  </defs>
+  <text id="rbbcrealty" class="cls-1" x="25.195" y="270.678">rbbc<tspan class="cls-2">realty</tspan></text>
+  <text id="_" data-name="®" class="cls-3" x="1550.769" y="126.112">®</text>
+</svg>

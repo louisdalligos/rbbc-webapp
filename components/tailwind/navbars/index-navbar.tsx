@@ -10,10 +10,10 @@ export default function Navbar() {
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link href="/">
               <a
-                className="text-gray-800 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase"
+                className="text-gray-800 text-sm font-bold leading-relaxed inline-block mr-4 py-1 whitespace-no-wrap uppercase"
                 href="#pablo"
               >
-                BRAND
+                <img src="/images/rbbc-logo.svg" width="145" alt="RBBC Realty" />
               </a>
             </Link>
             <button
@@ -33,40 +33,60 @@ export default function Navbar() {
           >
             <ul className="flex flex-col lg:flex-row list-none mr-auto">
               <li className="flex items-center">
-                <a
-                  className="hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus?ref=nnjs-index-navbar"
-                >
-                  <i className="text-gray-500 far fa-file-alt text-lg leading-lg mr-2" />{" "}
-                  MENU ITEM
-                </a>
+                <Link href="/townhouse">
+                  <a
+                    className="hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  >
+                    Townhouse
+                  </a>
+                </Link>
               </li>
-
-
+              <li className="flex items-center">
+                <Link href="/condominium">
+                  <a
+                    className="hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  >
+                    Condominium
+                  </a>
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <Link href="/house-and-lot">
+                  <a
+                    className="hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  >
+                    House &amp; Lot
+                  </a>
+                </Link>
+              </li>
             </ul>
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-
-
-
-
-
-              <li className="flex items-center">
+            <li className="flex items-center">
                 <a
                   className="hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="#"
                   target="_blank"
                 >
-                  <span className="inline-block ml-2">Login</span>
+                  <span className="flex justify-content align-center ml-2"><i className="fas fa-phone-square-alt text-green-500 text-2xl mr-2"></i><a className="mt-1" href="tel:+63 922 8882298">+63 977 8340256</a></span>
                 </a>
               </li>
               <li className="flex items-center">
-                <a
-                  className="hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="#"
-                  target="_blank"
-                >
-                  <span className="inline-block ml-2">Sign up</span>
-                </a>
+                <Link href="/login">
+                  <a
+                    className="hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  >
+                    <span className="inline-block ml-2">Login</span>
+                  </a>
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <Link href="/signup">
+                  <a
+                    className="hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  >
+                    <span className="inline-block ml-2">Sign up</span>
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
