@@ -12,7 +12,7 @@ export default function Terms() {
         </Head>
         <PageLayout>
             <section className="container mx-auto px-4 h-full">
-                <h2 className="text-3xl mb-8">Terms &amp; Conditions</h2>
+                <h2 className="text-3xl mb-8 font-semibold">Terms &amp; Conditions</h2>
 
                 <h3 className="text-lg font-semibold">1. Terms</h3>
                 <p className="leading-loose mb-6 ml-5">By accessing the website at <a href="https://www.rbbcrealty.com">https://www.rbbcrealty.com</a>, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.</p>

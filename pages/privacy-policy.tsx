@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
         </Head>
         <PageLayout>
             <section className="container mx-auto px-4 h-full">
-                <h2 className="text-3xl mb-8">Privacy Policy</h2>
+                <h2 className="text-3xl mb-8 font-semibold">Privacy Policy</h2>
                 <p className="leading-loose mb-6">Your privacy is important to us. It is RBBC Realty Inc.'s policy to respect your privacy regarding any information we may collect from you across our website, <a href="https://www.rbbcrealty.com">https://www.rbbcrealty.com</a>, and other sites we own and operate.</p>
                 <p className="leading-loose mb-6">We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.</p>
                 <p className="leading-loose mb-6">We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification.</p>
