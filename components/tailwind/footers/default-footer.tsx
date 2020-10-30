@@ -1,5 +1,4 @@
-import React from "react";
-import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -38,12 +37,15 @@ export default function Footer() {
                 >
                   <i className="fab fa-twitter"></i>
                 </button>
-                <button
-                  className="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i className="fab fa-facebook-square"></i>
-                </button>
+
+                <Link href="https://www.facebook.com/BrokeRac" passHref={true}>
+                  <button
+                    className="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    type="button"
+                  >
+                    <i className="fab fa-facebook-square"></i>
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="w-full lg:w-6/12 px-4">
@@ -54,12 +56,13 @@ export default function Footer() {
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="#"
-                      >
-                        About Us
-                      </a>
+                      <Link href="/about">
+                        <a
+                          className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                        >
+                          About Us
+                        </a>
+                      </Link>
                     </li>
                     <li>
                       <a
@@ -69,15 +72,6 @@ export default function Footer() {
                         Blog
                       </a>
                     </li>
-                    <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="#"
-                      >
-                        Another Link
-                      </a>
-                    </li>
-
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 px-4">
@@ -86,36 +80,31 @@ export default function Footer() {
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="#"
-                      >
-                        MIT License
-                      </a>
+                      <Link href="/terms">
+                        <a
+                          className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                        >
+                          Terms &amp; Conditions
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="#"
-                      >
-                        Terms &amp; Conditions
-                      </a>
+                      <Link href="/privacy-policy">
+                        <a
+                          className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                        >
+                          Privacy Policy
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="#"
-                      >
-                        Privacy Policy
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="#"
-                      >
-                        Contact Us
-                      </a>
+                      <Link href="/contact">
+                        <a
+                          className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                        >
+                          Contact Us
+                        </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -125,13 +114,14 @@ export default function Footer() {
           <hr className="my-6 border-gray-400" />
           <div className="flex justify-between w-full">
             <div className="text-sm text-gray-600 font-semibold py-1 flex items-center ">
-              Copyright © {new Date().getFullYear()} Your Company Inc.
+              Copyright © {new Date().getFullYear()} RBBC Realty Inc.
             </div>
             <div className="text-sm text-gray-600 font-semibold my-4 flex items-center justify-center">
               <span className="mr-2">Website powered by</span>
               <a
-                href="#"
+                href="https://unityprodesigns.com"
                 className="text-gray-600 hover:text-gray-900"
+                target="_blank"
               >
                 <img src="/unitypro-logo.png" width="34" />
               </a>
