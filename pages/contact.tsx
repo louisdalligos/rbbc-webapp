@@ -1,13 +1,13 @@
 import Head from 'next/head';
-import PageLayout from "@components/tailwind/layouts/page-layout"
+import PageLayout from '@components/tailwind/layouts/page-layout';
 
 export default function PrivacyPolicy() {
   return (
     <>
       <Head>
         <title>
-        Contact Us - RBBC Realty | Real state, Condominiums for sale, House for sale,
-        RFO, Rent to own
+          Contact Us - RBBC Realty | Real state, Condominiums for sale, House
+          for sale, RFO, Rent to own
         </title>
       </Head>
       <PageLayout>
@@ -18,7 +18,10 @@ export default function PrivacyPolicy() {
               <h3 className="font-semibold text-xl mb-4">Quezon City</h3>
               <p>
                 <span className="font-semibold block mb-2">Address</span>
-                <span className="mb-4 block">23 B Zamboanga St. Bgy Nayong Kanluran West Avenue, <br />Quezon City 1104</span>
+                <span className="mb-4 block">
+                  23 B Zamboanga St. Bgy Nayong Kanluran West Avenue, <br />
+                  Quezon City 1104
+                </span>
                 <span className="font-semibold block mb-2">Phone</span>
                 <span>09778340256</span>
               </p>
@@ -27,7 +30,10 @@ export default function PrivacyPolicy() {
               <h3 className="font-semibold text-xl mb-4">Pasay City</h3>
               <p>
                 <span className="font-semibold block mb-2">Address</span>
-                <span className="mb-4 block">1300 Seaside Blvd, <br />Pasay, Metro Manila</span>
+                <span className="mb-4 block">
+                  1300 Seaside Blvd, <br />
+                  Pasay, Metro Manila
+                </span>
               </p>
             </div>
           </div>
@@ -35,4 +41,4 @@ export default function PrivacyPolicy() {
       </PageLayout>
     </>
   );
-};
+}

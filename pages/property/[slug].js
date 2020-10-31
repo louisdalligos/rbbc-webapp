@@ -1,10 +1,11 @@
-import Head from "next/head";
-import PageLayout from "@components/tailwind/layouts/page-layout";
-import InquiryFormSidebar from "@components/tailwind/forms/inquiry-form-sidebar";
-import PropertContactSection from "@components/tailwind/property-contact-section";
+import Head from 'next/head';
+import PageLayout from '@components/tailwind/layouts/page-layout';
+import PropertyGallery from '@components/tailwind/property-gallery';
+import InquiryFormSidebar from '@components/tailwind/forms/inquiry-form-sidebar';
+import PropertContactSection from '@components/tailwind/property-contact-section';
 
 export default function PropertyDetail() {
-  const propertyTitle = "2637 22nd St";
+  const propertyTitle = '2637 22nd St';
 
   return (
     <>
@@ -18,7 +19,7 @@ export default function PropertyDetail() {
         <section className="container mx-auto px-8 h-full">
           <div className="flex flex-wrap">
             <div className="w-full h-auto lg:w-9/12 pr-8">
-              <img src="https://res.cloudinary.com/dsmxjpcpa/image/upload/v1600409650/RBBC/header-photo-98336c6be52b04f90ff74430bac1a9e5_yjxe6h.jpg" />
+              <PropertyGallery />
             </div>
 
             <div className="hidden lg:block w-full sm:w-full lg:w-3/12">

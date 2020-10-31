@@ -1,7 +1,7 @@
-import InquiryFormFooter from "@components/tailwind/forms/inquiry-form-footer";
+import InquiryFormFooter from '@components/tailwind/forms/inquiry-form-footer';
 
 export default function PropertContactSection({ propertyTitle }) {
-  return(
+  return (
     <section className="pt-20 pb-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center text-center mb-24">
@@ -32,5 +32,5 @@ export default function PropertContactSection({ propertyTitle }) {
         }
       `}</style>
     </section>
-  )
+  );
 }

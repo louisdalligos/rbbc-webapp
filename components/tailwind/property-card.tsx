@@ -13,13 +13,19 @@ export default function PropertyCard() {
         />
         <div className="px-4 py-5 flex-auto">
           <div className="flex items-baseline mb-3">
-            <span className="inline-block text-green-500 text-xs uppercase font-semibold tracking-wide">Townhouse</span>
+            <span className="inline-block text-green-500 text-xs uppercase font-semibold tracking-wide">
+              Townhouse
+            </span>
             <div className="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">
               2 beds &bull; 3 baths &bull; 127 sqm
             </div>
           </div>
-          <h4 className="font-semibold text-lg leading-tight truncate">Brizlane Townhouses -Visayas Avenue Quezon City – 4 Storey –</h4>
-          <p className="mt-2 mb-4 text-gray-600 text-sm">Starting price PHP 1,300,000</p>
+          <h4 className="font-semibold text-lg leading-tight truncate">
+            Brizlane Townhouses -Visayas Avenue Quezon City – 4 Storey –
+          </h4>
+          <p className="mt-2 mb-4 text-gray-600 text-sm">
+            Starting price PHP 1,300,000
+          </p>
         </div>
       </div>
     </div>

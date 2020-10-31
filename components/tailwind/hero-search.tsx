@@ -1,5 +1,5 @@
 const HeroSearch = () => {
-  return(
+  return (
     <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
       <div
         className="absolute top-0 w-full h-full bg-center bg-cover"
@@ -20,11 +20,22 @@ const HeroSearch = () => {
               <h1 className="text-white mt-10 font-semibold text-4xl leading-tight">
                 Let's find that property that you've been looking for
               </h1>
-              <p className="text-white my-8">Search confidently with your trusted source of homes for sale or rent</p>
+              <p className="text-white my-8">
+                Search confidently with your trusted source of homes for sale or
+                rent
+              </p>
               <form className="w-full max-w-lg mx-auto">
                 <div className="flex items-center py-2 mt-8">
-                  <input className="appearance-none block w-full bg-gray-200 text-gray-700 rounded-l-lg py-4 px-8 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="Try townhouse in quezon city" aria-label="Query" />
-                  <button className="flex-shrink-0 bg-green-500 hover:bg-green-600 text-sm text-white py-4 -mt-3 px-8 rounded-r-lg focus:outline-none" type="button">
+                  <input
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 rounded-l-lg py-4 px-8 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    type="text"
+                    placeholder="Try townhouse in quezon city"
+                    aria-label="Query"
+                  />
+                  <button
+                    className="flex-shrink-0 bg-green-500 hover:bg-green-600 text-sm text-white py-4 -mt-3 px-8 rounded-r-lg focus:outline-none"
+                    type="button"
+                  >
                     Search
                   </button>
                 </div>
@@ -34,7 +45,7 @@ const HeroSearch = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroSearch
+export default HeroSearch;

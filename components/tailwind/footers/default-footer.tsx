@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -6,7 +6,7 @@ export default function Footer() {
       <footer className="relative bg-gray-300 pt-8 pb-6">
         <div
           className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
-          style={{ transform: "translateZ(0)" }}
+          style={{ transform: 'translateZ(0)' }}
         >
           <svg
             className="absolute bottom-0 overflow-hidden"
@@ -57,9 +57,7 @@ export default function Footer() {
                   <ul className="list-unstyled">
                     <li>
                       <Link href="/about">
-                        <a
-                          className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        >
+                        <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">
                           About Us
                         </a>
                       </Link>
@@ -81,27 +79,21 @@ export default function Footer() {
                   <ul className="list-unstyled">
                     <li>
                       <Link href="/terms">
-                        <a
-                          className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        >
+                        <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">
                           Terms &amp; Conditions
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/privacy-policy">
-                        <a
-                          className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        >
+                        <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">
                           Privacy Policy
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/contact">
-                        <a
-                          className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        >
+                        <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">
                           Contact Us
                         </a>
                       </Link>
