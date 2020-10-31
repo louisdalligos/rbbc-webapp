@@ -14,6 +14,7 @@ module.exports = {
       zIndex: {
         2: 2,
         3: 3,
+        100: 100
       },
       inset: {
         '-100': '-100%',

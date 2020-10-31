@@ -87,33 +87,5 @@ export default function InquiryFormFooter() {
         </Form>
       )}
     </Formik>
-    // <form>
-    //   <h4 className="mb-4 text-xl">Ask a question</h4>
-    //   <InputIcon
-    //     name="fullname"
-    //     placeholder="Full name"
-    //     icon="fa-user"
-    //     type="text"
-    //   />
-    //   <InputIcon
-    //     name="email"
-    //     placeholder="Email"
-    //     icon="fa-envelope"
-    //     type="email"
-    //   />
-    //   <InputIcon name="phone" placeholder="Phone" icon="fa-phone" type="text" />
-    //   <textarea
-    //     name="message"
-    //     className="border w-full px-3 py-2 text-sm focus:outline-none focus:border-green-400 text-gray-700 placeholder-gray-600"
-    //     placeholder="I am interested in 2637 22nd St."
-    //   />
-    //   <button
-    //     type="submit"
-    //     className="bg-green-500 active:bg-blue-700 text-white py-2 w-full rounded-full text-sm my-3"
-    //   >
-    //     Send Inquiry
-    //   </button>
-    //   <small className="text-gray-700">By submitting, you agree to our <Link href="/terms"><a className="underline">terms of use</a></Link>.</small>
-    // </form>
   );
 }
