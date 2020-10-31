@@ -31,7 +31,7 @@ export default function InquiryFormFooter({ title }) {
     >
       {({ values, isSubmitting, errors, handleChange }) => (
         <Form>
-          <h4 className="mb-4 text-xl">{ title }</h4>
+          <h4 className="mb-4 text-xl">{title}</h4>
           <InputIcon
             name="fullname"
             placeholder="Full name"

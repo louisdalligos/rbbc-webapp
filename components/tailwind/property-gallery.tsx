@@ -121,9 +121,9 @@ export default function PropertyGallery() {
                 })
               : null}
 
-              <div className="m-20 mx-auto bg-gray-300 p-8 text-center">
-                <InquiryFormFooter title="More about this property" />
-              </div>
+            <div className="m-20 mx-auto bg-gray-300 p-8 text-center">
+              <InquiryFormFooter title="More about this property" />
+            </div>
           </div>
         </div>
       </div>
