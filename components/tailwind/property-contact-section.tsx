@@ -10,7 +10,7 @@ export default function PropertContactSection({ propertyTitle }) {
 
             <div className="flex flex-wrap justify-center">
               <div className="w-full lg:w-2/5 bg-gray-300 px-6 pt-4 pb-10">
-                <InquiryFormFooter />
+                <InquiryFormFooter title="Ask a question" />
               </div>
               <div className="hidden lg:block w-2/5">
                 <div className="item-bg"></div>

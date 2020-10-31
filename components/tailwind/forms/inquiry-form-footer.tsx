@@ -4,7 +4,7 @@ import InputIcon from '@components/tailwind/inputs/input-icon';
 import InputError from '@components/tailwind/inputs/input-error';
 import { inquiryFormValidation } from '@utils/validation';
 
-export default function InquiryFormFooter() {
+export default function InquiryFormFooter({ title }) {
   return (
     <Formik
       initialValues={{
@@ -31,7 +31,7 @@ export default function InquiryFormFooter() {
     >
       {({ values, isSubmitting, errors, handleChange }) => (
         <Form>
-          <h4 className="mb-4 text-xl">Ask a question</h4>
+          <h4 className="mb-4 text-xl">{ title }</h4>
           <InputIcon
             name="fullname"
             placeholder="Full name"
