@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
         </title>
       </Head>
       <PageLayout>
-        <section className="container mx-auto px-8 h-full">
+        <section className="container mx-auto h-full">
           <h2 className="text-3xl mb-8 font-semibold">Contact Us</h2>
           <div className="grid grid-flow-row sm:grid-flow-row md:grid-flow-col-dense lg:grid-flow-row-dense xl:grid-flow-col">
             <div className="my-6">

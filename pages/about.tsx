@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
         </title>
       </Head>
       <PageLayout>
-        <section className="container mx-auto px-8 h-full">
+        <section className="container mx-auto h-full">
           <h2 className="text-2xl mb-8">
             Contact Rachel to organise a viewing
           </h2>

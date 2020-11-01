@@ -1,4 +1,4 @@
-import PropertyCard from './property-card';
+import PropertyCard from '@components/tailwind/property-post/property-card';
 
 export default function HomeListings() {
   return (

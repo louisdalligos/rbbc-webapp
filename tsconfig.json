@@ -24,7 +24,8 @@
       "@data/*": ["./data/*"],
       "@typeDefs/*": ["./types/*"],
       "@public/*": ["./public/*"],
-      "@utils/*": ["./utils/*"]
+      "@utils/*": ["./utils/*"],
+      "@styles/*": ["./styles/*"]
     }
   },
   "exclude": ["node_modules"],

@@ -14,7 +14,7 @@ export default function PropertDetails() {
       <AccordionItem uuid="overview">
         <AccordionItemHeading>
           <AccordionItemButton>
-            <i className="lni lni-home mr-2"></i>
+            <i className="lni lni-layout mr-2"></i>
             Overview
           </AccordionItemButton>
         </AccordionItemHeading>

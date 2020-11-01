@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
         </title>
       </Head>
       <PageLayout>
-        <section className="container mx-auto px-8 h-full">
+        <section className="container mx-auto h-full">
           <h2 className="text-3xl mb-8 font-semibold">Privacy Policy</h2>
           <p className="leading-loose mb-6">
             Your privacy is important to us. It is RBBC Realty Inc.'s policy to

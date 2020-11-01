@@ -14,7 +14,8 @@
           "@context": "./context",
           "@typeDefs": "./types",
           "@utils": "./utils",
-          "@public": "./public"
+          "@public": "./public",
+          "@styles": "./styles"
         }
       }
     ]

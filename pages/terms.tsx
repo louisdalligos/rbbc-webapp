@@ -11,7 +11,7 @@ export default function Terms() {
         </title>
       </Head>
       <PageLayout>
-        <section className="container mx-auto px-4 h-full">
+        <section className="container mx-auto h-full">
           <h2 className="text-3xl mb-8 font-semibold">
             Terms &amp; Conditions
           </h2>

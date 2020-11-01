@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import PageLayout from '@components/tailwind/layouts/page-layout';
-import PropertyGallery from '@components/tailwind/property-gallery';
-import PropertyDetails from '@components/tailwind/property-details';
+import PropertyGallery from '@components/tailwind/property-post/property-gallery';
+import PropertyDetails from '@components/tailwind/property-post/property-details';
 import InquiryFormSidebar from '@components/tailwind/forms/inquiry-form-sidebar';
-import PropertContactSection from '@components/tailwind/property-contact-section';
+import PropertContactSection from '@components/tailwind/property-post/property-contact-section';
+import PropertyHeading from '@components/tailwind/property-post/property-heading';
 
 export default function PropertyDetail() {
   const propertyTitle = '2637 22nd St';
@@ -17,14 +18,12 @@ export default function PropertyDetail() {
         </title>
       </Head>
       <PageLayout>
-        <section className="container mx-auto px-8 h-full">
+        <section className="container mx-auto h-full -mt-5">
+          <PropertyHeading />
           <div className="flex flex-wrap">
-            <div className="w-full h-auto lg:w-9/12 pr-8">
+            <div className="w-full h-auto lg:w-9/12 lg:pr-8">
               <PropertyGallery />
-
-              <div className="my-10">
-                <PropertyDetails />
-              </div>
+              <PropertyDetails />
             </div>
 
             <div className="hidden lg:block w-full sm:w-full lg:w-3/12">
