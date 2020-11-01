@@ -21,7 +21,10 @@ export default function PropertyDetail() {
           <div className="flex flex-wrap">
             <div className="w-full h-auto lg:w-9/12 pr-8">
               <PropertyGallery />
-              <PropertyDetails />
+
+              <div className="my-10">
+                <PropertyDetails />
+              </div>
             </div>
 
             <div className="hidden lg:block w-full sm:w-full lg:w-3/12">

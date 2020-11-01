@@ -6,6 +6,10 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="icon" href="/favicon.ico" />
+          <link
+            href="https://cdn.lineicons.com/2.0/LineIcons.css"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
