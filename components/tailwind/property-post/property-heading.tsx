@@ -1,10 +1,18 @@
 import DefaultBreadcrumbs from '@components/tailwind/breadcrumbs/default-breadcrumb';
 import Badge from '@components/tailwind/badge/badge';
+import Share from '@components/tailwind/social/share';
 
 export default function PropertyHeading() {
   return (
     <div className="px-4 lg:px-0">
-      <DefaultBreadcrumbs />
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
+        <div className="">
+          <DefaultBreadcrumbs />
+        </div>
+        <div className="">
+          <Share />
+        </div>
+      </div>
 
       <div className="flex flex-wrap lg:items-baseline">
         <h2 className="text-2xl font-semibold">
@@ -14,7 +22,9 @@ export default function PropertyHeading() {
         <Badge name="featured" variant="danger" />
       </div>
 
-      <span className="text-sm"><i className="lni lni-map-marker"></i> Novaliches, Quezon City</span>
+      <span className="text-sm">
+        <i className="lni lni-map-marker"></i> Novaliches, Quezon City
+      </span>
     </div>
   );
 }

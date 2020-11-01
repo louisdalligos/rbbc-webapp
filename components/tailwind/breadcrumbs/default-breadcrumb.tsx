@@ -7,7 +7,7 @@ export default function Breadcrumbs() {
     'Don Antonio Heights – 3 Storey Townhouse for Sale in Quezon City';
 
   return (
-    <nav className="w-full mb-4">
+    <nav className="w-full">
       <ol className="list-reset flex text-gray-800 text-sm">
         <li>
           <Link href="/">

@@ -19,26 +19,30 @@ export default function PropertDetails() {
           </AccordionItemButton>
         </AccordionItemHeading>
         <AccordionItemPanel>
-        <div className="flex text-sm">
-          <div className="flex-1 p-2 text-center">
-            Property Type: <strong>Townhouse</strong>
+          <div className="flex text-sm">
+            <div className="flex-1 p-2 text-center">
+              Property Type: <strong>Townhouse</strong>
+            </div>
+            <div className="flex-1 p-2 text-center">
+              <i className="fas fa-bed mr-1"></i>
+              <strong>3</strong>
+            </div>
+            <div className="flex-1 p-2 text-center">
+              <i className="fas fa-bath mr-1"></i>
+              <strong>3</strong>
+            </div>
+            <div className="flex-1 p-2 text-center">
+              <i className="fas fa-warehouse mr-1"></i>
+              <strong>2</strong>
+            </div>
+            <div className="flex-1 p-2 text-center">
+              <i className="fas fa-map-marked-alt mr-1"></i>
+              <strong>127 sqm</strong>
+            </div>
+            <div className="flex-1 p-2">
+              Year built: <strong>2020</strong>
+            </div>
           </div>
-          <div className="flex-1 p-2 text-center">
-          <i className="fas fa-bed"></i>: <strong>3</strong>
-          </div>
-          <div className="flex-1 p-2 text-center">
-          <i className="fas fa-bath"></i>: <strong>3</strong>
-          </div>
-          <div className="flex-1 p-2 text-center">
-          <i className="fas fa-warehouse"></i>: <strong>2</strong>
-          </div>
-          <div className="flex-1 p-2 text-center">
-          <i className="fas fa-map-marked-alt"></i>: <strong>127 sqm</strong>
-          </div>
-          <div className="flex-1 p-2">
-            Year built: <strong>2020</strong>
-          </div>
-        </div>
         </AccordionItemPanel>
       </AccordionItem>
       <AccordionItem uuid="details">
