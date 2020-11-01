@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import PropertyMap from '@components/google-map/property-map'
 
 import {
   Accordion,
@@ -7,6 +7,12 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
+
+const location = {
+  address: 'Novaliches, Quezon City, Metro Manila',
+  lat: 14.681537,
+  lng: 121.079228,
+}
 
 export default function PropertDetails() {
   return (
@@ -24,19 +30,19 @@ export default function PropertDetails() {
               Property Type: <strong>Townhouse</strong>
             </div>
             <div className="flex-1 p-2 text-center">
-              <i className="fas fa-bed mr-1"></i>
+              <i className="fas fa-bed mr-1 text-green-500"></i>
               <strong>3</strong>
             </div>
             <div className="flex-1 p-2 text-center">
-              <i className="fas fa-bath mr-1"></i>
+              <i className="fas fa-bath mr-1 text-green-500"></i>
               <strong>3</strong>
             </div>
             <div className="flex-1 p-2 text-center">
-              <i className="fas fa-warehouse mr-1"></i>
+              <i className="fas fa-warehouse mr-1 text-green-500"></i>
               <strong>2</strong>
             </div>
             <div className="flex-1 p-2 text-center">
-              <i className="fas fa-map-marked-alt mr-1"></i>
+              <i className="fas fa-map-marked-alt mr-1 text-green-500"></i>
               <strong>127 sqm</strong>
             </div>
             <div className="flex-1 p-2">
@@ -53,7 +59,7 @@ export default function PropertDetails() {
           </AccordionItemButton>
         </AccordionItemHeading>
         <AccordionItemPanel>
-          <p>
+          <div className="text-gray-900 text-sm leading-6">
             Highly desirable 2 br 2 ba top floor corner unit is available at the
             Royal-the former Royal Insurance Building-located in the heart of
             San Francisco Financial District. This historic landmark building
@@ -70,7 +76,7 @@ export default function PropertDetails() {
             Union Square, Chinatown, North Beach and the Embarcadero waterfront
             is a breeze. This condo truly offers quintessential downtown living
             at its finest.
-          </p>
+          </div>
         </AccordionItemPanel>
       </AccordionItem>
       <AccordionItem uuid="map">
@@ -81,66 +87,9 @@ export default function PropertDetails() {
           </AccordionItemButton>
         </AccordionItemHeading>
         <AccordionItemPanel>
-          <p>
-            In ad velit in ex nostrud dolore cupidatat consectetur ea in ut
-            nostrud velit in irure cillum tempor laboris sed adipisicing eu esse
-            duis nulla non.
-          </p>
+          <PropertyMap location={location} zoomLevel={16}/>
         </AccordionItemPanel>
       </AccordionItem>
     </Accordion>
-    // <section className="my-10">
-    //   <article className="border-b">
-    //     <header className="flex justify-between items-center p-5 pl-3 pr-3 cursor-pointer select-none">
-    //       <span className="text-grey-darkest font-semibold text-xl">
-    //         <i className="fas fa-home mr-2"></i> Open House
-    //       </span>
-    //       <i className="fas fa-chevron-down"></i>
-    //     </header>
-    //       <div className="pl-3 pr-3 pb-5">
-    //         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis quo
-    //         esse consequuntur obcaecati asperiores officia totam autem eos
-    //         sed, ut cupiditate! Placeat delectus, quaerat at non perferendis
-    //         expedita! Sed, atque.
-    //       </div>
-    //   </article>
-
-    //   <article className="border-b">
-    //     <header className="flex justify-between items-center p-5 pl-3 pr-3 cursor-pointer select-none">
-    //       <span className="text-indigo font-semibold text-xl">
-    //         <i className="fas fa-home mr-2"></i> Property Details
-    //       </span>
-    //       <i className="fas fa-chevron-up"></i>
-    //     </header>
-
-    //     <div className="pl-3 pr-3 pb-5">
-    //       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis quo
-    //       esse consequuntur obcaecati asperiores officia totam autem eos
-    //       sed, ut cupiditate! Placeat delectus, quaerat at non perferendis
-    //       expedita! Sed, atque.
-    //     </div>
-
-    //   </article>
-    //   <article className="border-b">
-    //     <div className="border-l-2 border-transparent">
-    //       <header className="flex justify-between items-center p-5 pl-3 pr-3 cursor-pointer select-none">
-    //         <span className="text-grey-darkest font-semibold text-xl">
-    //           <i className="fas fa-home mr-2"></i> Nearby Schools
-    //         </span>
-    //         <i className="fas fa-chevron-down"></i>
-    //       </header>
-    //     </div>
-    //   </article>
-    //   <article className="border-b">
-    //     <div className="border-l-2 border-transparent">
-    //       <header className="flex justify-between items-center p-5 pl-3 pr-3 cursor-pointer select-none">
-    //         <span className="text-grey-darkest font-semibold text-xl">
-    //           <i className="fas fa-home mr-2"></i> Payment
-    //         </span>
-    //         <i className="fas fa-chevron-down"></i>
-    //       </header>
-    //     </div>
-    //   </article>
-    // </section>
   );
 }

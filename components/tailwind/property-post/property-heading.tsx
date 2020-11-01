@@ -15,7 +15,7 @@ export default function PropertyHeading() {
       </div>
 
       <div className="flex flex-wrap lg:items-baseline">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl font-semibold mr-2">
           Don Antonio Heights – 3 Storey Townhouse for Sale in Quezon City
         </h2>
         <Badge name="new" variant="warning" />
