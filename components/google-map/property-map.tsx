@@ -1,16 +1,18 @@
-import GoogleMapReact from 'google-map-react'
+import GoogleMapReact from 'google-map-react';
 
 const LocationPin = ({ text }) => (
   <div className="pin">
     <i className="lni lni-map-marker text-4xl font-bold text-green-600"></i>
-    <p className="pin-text bg-white border p-2 w-1/6 text-center text-gray-700">{text}</p>
+    <p className="pin-text bg-white border p-2 w-1/6 text-center text-gray-700">
+      {text}
+    </p>
   </div>
-)
+);
 
-export default function PropertyMap( { location, zoomLevel }) {
+export default function PropertyMap({ location, zoomLevel }) {
   function createMapOptions(maps) {
     return {
-      mapId: process.env.NEXT_PUBLIC_GOOGLE_MAP_ID
+      mapId: process.env.NEXT_PUBLIC_GOOGLE_MAP_ID,
     };
   }
 
@@ -22,16 +24,13 @@ export default function PropertyMap( { location, zoomLevel }) {
         defaultZoom={zoomLevel}
         options={createMapOptions}
       >
-        <LocationPin
-          text={location.address}
-        />
+        <LocationPin text={location.address} />
       </GoogleMapReact>
       <style jsx>{`
         .property-map {
           height: 380px;
         }
         .pin-text {
-
         }
       `}</style>
     </div>

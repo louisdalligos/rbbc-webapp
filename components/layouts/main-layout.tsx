@@ -1,6 +1,6 @@
 import React from 'react';
-import IndexNavbar from '@components/tailwind/navbars/index-navbar';
-import Footer from '@components/tailwind/footers/default-footer';
+import IndexNavbar from '@components/navbars/index-navbar';
+import Footer from '@components/footers/default-footer';
 
 export default function MainLayout({ children }) {
   return (

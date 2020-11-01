@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Formik, Field, Form } from 'formik';
-import InputIcon from '@components/tailwind/inputs/input-icon';
-import InputError from '@components/tailwind/inputs/input-error';
+import InputIcon from '@components/inputs/input-icon';
+import InputError from '@components/inputs/input-error';
 import { inquiryFormValidation } from '@utils/validation';
 
 export default function InquiryFormFooter({ title }) {

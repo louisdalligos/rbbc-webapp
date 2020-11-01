@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import MainLayout from '@components/tailwind/layouts/main-layout';
-import HeroSearch from '@components/tailwind/hero-search';
-import HomeListings from '@components/tailwind/home-listings';
+import MainLayout from '@components/layouts/main-layout';
+import HeroSearch from '@components/hero-search';
+import HomeListings from '@components/home-listings';
 
 const Index = () => {
   return (

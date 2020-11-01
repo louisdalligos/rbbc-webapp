@@ -1,6 +1,6 @@
-import DefaultBreadcrumbs from '@components/tailwind/breadcrumbs/default-breadcrumb';
-import Badge from '@components/tailwind/badge/badge';
-import Share from '@components/tailwind/social/share';
+import DefaultBreadcrumbs from '@components/breadcrumbs/default-breadcrumb';
+import Badge from '@components/badge/badge';
+import Share from '@components/social/share';
 
 export default function PropertyHeading() {
   return (

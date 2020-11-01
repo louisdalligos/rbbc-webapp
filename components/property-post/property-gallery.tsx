@@ -2,7 +2,7 @@ import React, { CSSProperties, useState } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import classNames from 'classnames';
-import InquiryFormFooter from '@components/tailwind/forms/inquiry-form-footer';
+import InquiryFormFooter from '@components/forms/inquiry-form-footer';
 
 const images = [
   {

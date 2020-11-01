@@ -1,4 +1,4 @@
-import PropertyMap from '@components/google-map/property-map'
+import PropertyMap from '@components/google-map/property-map';
 
 import {
   Accordion,
@@ -12,7 +12,7 @@ const location = {
   address: 'Novaliches, Quezon City, Metro Manila',
   lat: 14.681537,
   lng: 121.079228,
-}
+};
 
 export default function PropertDetails() {
   return (
@@ -87,7 +87,7 @@ export default function PropertDetails() {
           </AccordionItemButton>
         </AccordionItemHeading>
         <AccordionItemPanel>
-          <PropertyMap location={location} zoomLevel={16}/>
+          <PropertyMap location={location} zoomLevel={16} />
         </AccordionItemPanel>
       </AccordionItem>
     </Accordion>

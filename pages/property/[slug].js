@@ -1,10 +1,12 @@
 import Head from 'next/head';
-import PageLayout from '@components/tailwind/layouts/page-layout';
-import PropertyGallery from '@components/tailwind/property-post/property-gallery';
-import PropertyDetails from '@components/tailwind/property-post/property-details';
-import InquiryFormSidebar from '@components/tailwind/forms/inquiry-form-sidebar';
-import PropertContactSection from '@components/tailwind/property-post/property-contact-section';
-import PropertyHeading from '@components/tailwind/property-post/property-heading';
+import PageLayout from '@components/layouts/page-layout';
+import PropertyGallery from '@components/property-post/property-gallery';
+import PropertyDetails from '@components/property-post/property-details';
+import InquiryFormSidebar from '@components/forms/inquiry-form-sidebar';
+import PropertContactSection from '@components/property-post/property-contact-section';
+import PropertyHeading from '@components/property-post/property-heading';
+import ListingAuthor from '@components/widgets/listing-author';
+import Disclaimer from '@components/widgets/disclaimer';
 
 export default function PropertyDetail() {
   const propertyTitle = '2637 22nd St';
@@ -33,6 +35,9 @@ export default function PropertyDetail() {
                 </h4>
                 <InquiryFormSidebar />
               </div>
+
+              <ListingAuthor />
+              <Disclaimer />
             </div>
           </div>
         </section>

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import PageLayout from '@components/tailwind/layouts/page-layout';
+import PageLayout from '@components/layouts/page-layout';
 import Image from 'next/image';
 
 export default function PrivacyPolicy() {

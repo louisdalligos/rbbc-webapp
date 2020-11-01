@@ -1,4 +1,4 @@
-import InquiryFormFooter from '@components/tailwind/forms/inquiry-form-footer';
+import InquiryFormFooter from '@components/forms/inquiry-form-footer';
 
 export default function PropertContactSection({ propertyTitle }) {
   return (
