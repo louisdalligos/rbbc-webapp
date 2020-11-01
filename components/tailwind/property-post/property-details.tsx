@@ -19,24 +19,26 @@ export default function PropertDetails() {
           </AccordionItemButton>
         </AccordionItemHeading>
         <AccordionItemPanel>
-          <p>
-            Highly desirable 2 br 2 ba top floor corner unit is available at the
-            Royal-the former Royal Insurance Building-located in the heart of
-            San Francisco Financial District. This historic landmark building
-            was designed by Howell & Stokes Architects with Georgian Revival
-            architecture. Built in 1909, it was extensively renovated in 2006
-            and converted to condos. The elegant marble lobby is adorned with
-            ornamentation from a 17th century Italian palazzo. Residence itself
-            has windows on three side which provide an abundance of natural
-            light throughout the day. It features hardwood floors, high
-            ceilings, recessed lighting, chef's kitchen, in-unit w/d, central
-            heating and air-conditioning. Off-site convenient parking is
-            available. BART, ferry and bus services are virtually at your
-            doorstep. Close to gym, cafes, restaurants and shops. Walk to nearby
-            Union Square, Chinatown, North Beach and the Embarcadero waterfront
-            is a breeze. This condo truly offers quintessential downtown living
-            at its finest.
-          </p>
+        <div className="flex text-sm">
+          <div className="flex-1 p-2 text-center">
+            Property Type: <strong>Townhouse</strong>
+          </div>
+          <div className="flex-1 p-2 text-center">
+          <i className="fas fa-bed"></i>: <strong>3</strong>
+          </div>
+          <div className="flex-1 p-2 text-center">
+          <i className="fas fa-bath"></i>: <strong>3</strong>
+          </div>
+          <div className="flex-1 p-2 text-center">
+          <i className="fas fa-warehouse"></i>: <strong>2</strong>
+          </div>
+          <div className="flex-1 p-2 text-center">
+          <i className="fas fa-map-marked-alt"></i>: <strong>127 sqm</strong>
+          </div>
+          <div className="flex-1 p-2">
+            Year built: <strong>2020</strong>
+          </div>
+        </div>
         </AccordionItemPanel>
       </AccordionItem>
       <AccordionItem uuid="details">

@@ -20,7 +20,7 @@ export default function PropertyDetail() {
       <PageLayout>
         <section className="container mx-auto h-full -mt-5">
           <PropertyHeading />
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap mt-4">
             <div className="w-full h-auto lg:w-9/12 lg:pr-8">
               <PropertyGallery />
               <PropertyDetails />
