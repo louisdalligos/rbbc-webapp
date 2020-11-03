@@ -5,7 +5,7 @@ export default function PropertyCard({ item }) {
     <div className="w-full md:w-6/12 lg:w-4/12 px-4 cursor-pointer">
       <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg overflow-hidden">
         <img
-          src={item.gallery[0].formats.large.url}
+          src={item.gallery ? item.gallery[0].formats.medium.url : 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/No_image.svg/500px-No_image.svg.png'}
           alt={item.title}
           width={1000}
           height={467}
@@ -31,6 +31,7 @@ export default function PropertyCard({ item }) {
       <style jsx>{`
         .object-cover {
           min-height: 240px;
+          max-height: 240px;
         }
       `}</style>
     </div>
