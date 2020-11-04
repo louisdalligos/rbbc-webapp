@@ -1,11 +1,8 @@
 import Link from 'next/link';
-import { useProperty } from '@context/property/Property';
 
-export default function Breadcrumbs() {
+export default function Breadcrumbs({ title }) {
   const type = 'townhouse';
   const formatType = `${type[0].toUpperCase()}${type.slice(1)}`;
-
-  const { title } = useProperty();
 
   return (
     <nav className="w-full">

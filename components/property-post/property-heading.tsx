@@ -7,14 +7,14 @@ export default function PropertyHeading({ title, address, price, tags }) {
     <div className="px-4 lg:px-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
         <div className="">
-          <DefaultBreadcrumbs />
+          <DefaultBreadcrumbs title={title} />
         </div>
         <div className="">
           <Share />
         </div>
       </div>
 
-      <div className="flex flex-wrap lg:items-baseline">
+      <div className="flex flex-wrap items-baseline">
         <h2 className="text-2xl font-semibold mr-2">{title}</h2>
         {tags &&
           tags.length &&

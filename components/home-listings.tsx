@@ -9,8 +9,7 @@ export default function HomeListings({ listings }) {
         <h2 className="mx-4 text-3xl mb-8">Featured listings</h2>
         <div className="flex flex-wrap">
           {listings &&
-            listings.listings &&
-            listings.listings.map((item) => {
+            listings.map((item) => {
               return <PropertyCard item={item} key={item._id} />;
             })}
         </div>

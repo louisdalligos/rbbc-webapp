@@ -1,32 +1,18 @@
 import Head from 'next/head';
-import { request } from 'graphql-request';
-import useSWR from 'swr';
+import { withApollo } from '@services/apollo';
+import { useQuery } from '@apollo/react-hooks';
+import { FEATURED_LISTINGS } from '@queries/featuredListingsQuery';
 
 import MainLayout from '@components/layouts/main-layout';
 import HeroSearch from '@components/hero-search';
 import HomeListings from '@components/home-listings';
 
-const API_ENDPOINT = `${process.env.NEXT_PUBLIC_API_URL}/graphql`;
-const listingsQuery = `query getListings{
-  listings{
-    _id
-   	title
-    slug
-    startingPrice
-    gallery {
-      formats
-    }
-    listing_types {
-      name
-    }
-  }
-}`;
-
 const Index = () => {
-  const { data: listings, error } = useSWR(listingsQuery, (query) =>
-    request(API_ENDPOINT, query),
-  );
+  const { loading, error, data } = useQuery(FEATURED_LISTINGS);
+  if (error) return <p>There was an error processing your request</p>;
+  if (loading) return <p>Loading...</p>;
 
+  console.log(data);
   return (
     <>
       <Head>
@@ -73,10 +59,10 @@ const Index = () => {
       </Head>
       <MainLayout>
         <HeroSearch />
-        {error && <p>There was an error processing your request</p>}
-        <HomeListings listings={listings} />
+        <HomeListings listings={data.listings} />
       </MainLayout>
     </>
   );
 };
-export default Index;
+
+export default withApollo({ ssr: true })(Index);

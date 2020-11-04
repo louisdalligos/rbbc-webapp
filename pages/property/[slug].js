@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { withApollo } from '@services/apollo';
@@ -25,7 +24,6 @@ const PropertyDetail = () => {
   });
   if (error) return <h1>Error</h1>;
   if (loading) return <h1>Loading...</h1>;
-
 
   const {
     title,
@@ -60,13 +58,13 @@ const PropertyDetail = () => {
             price={startingPrice}
             tags={tags}
           />
-          <div className="flex flex-wrap mt-4">
-            <div className="w-full h-auto lg:w-9/12 lg:w-9/12 lg:pr-8">
+          <div className="flex mt-4">
+            <div className="h-auto lg:col-span-2 lg:w-9/12 lg:pr-8">
               <PropertyGallery gallery={gallery} />
               <PropertyDetails description={propertyDescription} />
             </div>
 
-            <div className="hidden lg:block w-full sm:w-full lg:w-3/12 xl:w-3/12">
+            <div className="hidden lg:block lg:col-span-1 w-3/12">
               <div className="px-3 py-2 bg-gray-100 rounded border h-auto">
                 <h4 className="text-lg text-center mb-2">
                   More about this property
