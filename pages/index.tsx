@@ -7,7 +7,7 @@ import HeroSearch from '@components/hero-search';
 import HomeListings from '@components/home-listings';
 
 const API_ENDPOINT = `${process.env.NEXT_PUBLIC_API_URL}/graphql`;
-const listingsQuery = `  query getListings{
+const listingsQuery = `query getListings{
   listings{
     _id
    	title

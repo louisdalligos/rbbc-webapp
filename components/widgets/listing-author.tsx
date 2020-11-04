@@ -16,7 +16,7 @@ export default function ListingAuthor() {
           <span className="text-xs font-normal">LIC Broker</span>
         </h4>
         <a
-          className="bg-gray-600 active:bg-blue-700 text-white py-1 px-3  text-sm  focus:outline-non"
+          className="bg-gray-600 active:bg-blue-700 text-white py-1 px-3  text-sm  focus:outline-none rounded-full"
           href="tel:+639778340256"
         >
           How can I assist you?
