@@ -4,7 +4,6 @@ import Head from 'next/head';
 import { withApollo } from '@services/apollo';
 import { useQuery } from '@apollo/react-hooks';
 import { PROPERTY_DETAIL } from '@queries/propertyDetailQuery';
-import { useProperty } from '@context/property/Property';
 import { metaDescription } from '@utils/constants';
 
 // Components
@@ -18,21 +17,24 @@ import ListingAuthor from '@components/widgets/listing-author';
 import Disclaimer from '@components/widgets/disclaimer';
 
 const PropertyDetail = () => {
-  const { setPropertyData, title } = useProperty();
   const router = useRouter();
   const slug = router.query.slug;
   const { loading, error, data } = useQuery(PROPERTY_DETAIL, {
     variables: { slug },
+    refreshInterval: 3000,
   });
   if (error) return <h1>Error</h1>;
   if (loading) return <h1>Loading...</h1>;
 
-  useEffect(() => {
-    if (!loading) {
-      console.log(data, 'data fetched');
-      setPropertyData(data);
-    }
-  }, []);
+
+  const {
+    title,
+    address,
+    tags,
+    startingPrice,
+    gallery,
+    propertyDescription,
+  } = data.listings[0];
 
   return (
     <>
@@ -52,14 +54,19 @@ const PropertyDetail = () => {
       </Head>
       <PageLayout>
         <section className="container mx-auto h-full -mt-5">
-          <PropertyHeading />
+          <PropertyHeading
+            title={title}
+            address={address}
+            price={startingPrice}
+            tags={tags}
+          />
           <div className="flex flex-wrap mt-4">
-            <div className="w-full h-auto lg:w-9/12 lg:pr-8">
-              <PropertyGallery />
-              <PropertyDetails />
+            <div className="w-full h-auto lg:w-9/12 lg:w-9/12 lg:pr-8">
+              <PropertyGallery gallery={gallery} />
+              <PropertyDetails description={propertyDescription} />
             </div>
 
-            <div className="hidden lg:block w-full sm:w-full lg:w-3/12">
+            <div className="hidden lg:block w-full sm:w-full lg:w-3/12 xl:w-3/12">
               <div className="px-3 py-2 bg-gray-100 rounded border h-auto">
                 <h4 className="text-lg text-center mb-2">
                   More about this property

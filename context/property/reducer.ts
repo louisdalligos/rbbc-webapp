@@ -9,7 +9,8 @@ const reducer = (state, action) => {
         address: data.address,
         tags: data.tags,
         price: data.startingPrice,
-        gallery: data.gallery
+        gallery: data.gallery,
+        details: data.propertyDescription,
       };
     }
 

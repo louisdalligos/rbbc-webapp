@@ -1,10 +1,11 @@
-import React, { useContext, useReducer, createContext } from 'react';
+import React, { useContext, useReducer, createContext, useMemo } from 'react';
 import reducer from './reducer';
 
 const initialState = {
   title: null,
   address: null,
   price: null,
+  details: null,
   tags: [],
   gallery: [],
   setPropertyData: (data) => {},
@@ -22,17 +23,21 @@ export const PropertyProvider = ({ children }) => {
     });
   };
 
+  const value = useMemo(
+    () => ({
+      title: state.title,
+      address: state.address,
+      details: state.details,
+      price: state.price,
+      tags: state.tags,
+      gallery: state.gallery,
+      setPropertyData,
+    }),
+    [state.title],
+  );
+
   return (
-    <PropertyContext.Provider
-      value={{
-        title: state.title,
-        address: state.address,
-        price: state.price,
-        tags: state.tags,
-        gallery: state.gallery,
-        setPropertyData,
-      }}
-    >
+    <PropertyContext.Provider value={value}>
       {children}
     </PropertyContext.Provider>
   );
@@ -41,7 +46,7 @@ export const PropertyProvider = ({ children }) => {
 export function useProperty() {
   const context = useContext(PropertyContext);
   if (context === undefined) {
-    throw new Error('useProperty must be used within an PropertyContext');
+    throw new Error('You forgot to wrap PropertyProvider');
   }
   return context;
 }

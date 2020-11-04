@@ -3,11 +3,9 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import classNames from 'classnames';
 import InquiryFormFooter from '@components/forms/inquiry-form-footer';
-import { useProperty } from '@context/property/Property';
 
-export default function PropertyGallery() {
+export default function PropertyGallery({ gallery }) {
   const [hideGallery, setHideGallery] = useState(true);
-  const { gallery } = useProperty();
 
   const arrowStyles: CSSProperties = {
     position: 'absolute',

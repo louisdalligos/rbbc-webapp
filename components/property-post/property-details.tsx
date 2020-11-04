@@ -1,4 +1,5 @@
 import PropertyMap from '@components/google-map/property-map';
+let parse = require('html-react-parser');
 
 import {
   Accordion,
@@ -14,7 +15,7 @@ const location = {
   lng: 121.079228,
 };
 
-export default function PropertDetails() {
+export default function PropertDetails({ description }) {
   return (
     <Accordion allowMultipleExpanded preExpanded={['overview']}>
       <AccordionItem uuid="overview">
@@ -60,22 +61,7 @@ export default function PropertDetails() {
         </AccordionItemHeading>
         <AccordionItemPanel>
           <div className="text-gray-900 text-sm leading-6">
-            Highly desirable 2 br 2 ba top floor corner unit is available at the
-            Royal-the former Royal Insurance Building-located in the heart of
-            San Francisco Financial District. This historic landmark building
-            was designed by Howell & Stokes Architects with Georgian Revival
-            architecture. Built in 1909, it was extensively renovated in 2006
-            and converted to condos. The elegant marble lobby is adorned with
-            ornamentation from a 17th century Italian palazzo. Residence itself
-            has windows on three side which provide an abundance of natural
-            light throughout the day. It features hardwood floors, high
-            ceilings, recessed lighting, chef's kitchen, in-unit w/d, central
-            heating and air-conditioning. Off-site convenient parking is
-            available. BART, ferry and bus services are virtually at your
-            doorstep. Close to gym, cafes, restaurants and shops. Walk to nearby
-            Union Square, Chinatown, North Beach and the Embarcadero waterfront
-            is a breeze. This condo truly offers quintessential downtown living
-            at its finest.
+            {parse(`${description}`)}
           </div>
         </AccordionItemPanel>
       </AccordionItem>

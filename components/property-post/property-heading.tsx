@@ -2,11 +2,7 @@ import DefaultBreadcrumbs from '@components/breadcrumbs/default-breadcrumb';
 import Badge from '@components/badge/badge';
 import Share from '@components/social/share';
 
-import { useProperty } from '@context/property/Property';
-
-export default function PropertyHeading() {
-  const { title, address, price, tags } = useProperty();
-
+export default function PropertyHeading({ title, address, price, tags }) {
   return (
     <div className="px-4 lg:px-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
