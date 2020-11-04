@@ -4,15 +4,15 @@ import { useQuery } from '@apollo/react-hooks';
 import { FEATURED_LISTINGS } from '@queries/featuredListingsQuery';
 
 import MainLayout from '@components/layouts/main-layout';
+import LoadingLayout from '@components/layouts/loading-layout';
 import HeroSearch from '@components/hero-search';
 import HomeListings from '@components/home-listings';
 
 const Index = () => {
   const { loading, error, data } = useQuery(FEATURED_LISTINGS);
   if (error) return <p>There was an error processing your request</p>;
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <LoadingLayout />;
 
-  console.log(data);
   return (
     <>
       <Head>

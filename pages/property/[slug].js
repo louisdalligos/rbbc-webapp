@@ -7,6 +7,7 @@ import { metaDescription } from '@utils/constants';
 
 // Components
 import PageLayout from '@components/layouts/page-layout';
+import LoadingLayout from '@components/layouts/loading-layout';
 import PropertyGallery from '@components/property-post/property-gallery';
 import PropertyDetails from '@components/property-post/property-details';
 import InquiryFormSidebar from '@components/forms/inquiry-form-sidebar';
@@ -22,8 +23,8 @@ const PropertyDetail = () => {
     variables: { slug },
     refreshInterval: 3000,
   });
-  if (error) return <h1>Error</h1>;
-  if (loading) return <h1>Loading...</h1>;
+  if (error) return <p>There was an error processing your request</p>;
+  if (loading) return <LoadingLayout />;
 
   const {
     title,
