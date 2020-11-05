@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
-export default function Breadcrumbs({ title }) {
-  const type = 'townhouse';
+export default function Breadcrumbs({ title, propertyType }) {
+  const type = propertyType[0].name;
+  const id = propertyType[0].id;
   const formatType = `${type[0].toUpperCase()}${type.slice(1)}`;
 
   return (
@@ -18,7 +19,12 @@ export default function Breadcrumbs({ title }) {
           </span>
         </li>
         <li>
-          <Link href={`/${type}`}>
+          <Link
+            href={{
+              pathname: `/type/${type}`,
+              query: { ref_key: `${id}` },
+            }}
+          >
             <a className="text-green-500">{formatType}</a>
           </Link>
         </li>

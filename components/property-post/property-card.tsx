@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function PropertyCard({ item }) {
   return (
     <Link href={`property/${item.slug}`}>
-      <div className="w-full md:w-6/12 lg:w-4/12 px-4 cursor-pointer">
+      <div className="col-span-1 cursor-pointer">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg overflow-hidden">
           <img
             src={

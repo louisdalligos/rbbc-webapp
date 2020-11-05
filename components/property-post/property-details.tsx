@@ -17,7 +17,7 @@ const location = {
 
 export default function PropertDetails({ description }) {
   return (
-    <Accordion allowMultipleExpanded preExpanded={['overview']}>
+    <Accordion allowMultipleExpanded preExpanded={['overview', 'details']}>
       <AccordionItem uuid="overview">
         <AccordionItemHeading>
           <AccordionItemButton>

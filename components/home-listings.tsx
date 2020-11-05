@@ -1,13 +1,12 @@
 import Link from 'next/link';
 import PropertyCard from '@components/property-post/property-card';
 
-export default function HomeListings({ listings }) {
-  console.log(listings, 'listing');
+export default function HomeListings({ listings, className, title }) {
   return (
-    <section className="pb-20 bg-gray-200 pt-24">
-      <div className="container mx-auto px-4">
-        <h2 className="mx-4 text-3xl mb-8">Featured listings</h2>
-        <div className="flex flex-wrap">
+    <section className={`${className}`}>
+      <div className="container mx-auto">
+        <h2 className="text-3xl mb-8">{title}</h2>
+        <div className="grid grid-cols-3 gap-10">
           {listings &&
             listings.map((item) => {
               return <PropertyCard item={item} key={item._id} />;

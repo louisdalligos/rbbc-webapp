@@ -2,12 +2,18 @@ import DefaultBreadcrumbs from '@components/breadcrumbs/default-breadcrumb';
 import Badge from '@components/badge/badge';
 import Share from '@components/social/share';
 
-export default function PropertyHeading({ title, address, price, tags }) {
+export default function PropertyHeading({
+  title,
+  address,
+  price,
+  tags,
+  propertyType,
+}) {
   return (
-    <div className="px-4 lg:px-0">
+    <div className="px-4 lg:px-0 mb-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
         <div className="">
-          <DefaultBreadcrumbs title={title} />
+          <DefaultBreadcrumbs title={title} propertyType={propertyType} />
         </div>
         <div className="">
           <Share />

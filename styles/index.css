@@ -13,3 +13,23 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+.page-body {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+.with-container {
+  padding-top: 100px;
+  padding-bottom: 320px; /* height of your footer */
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

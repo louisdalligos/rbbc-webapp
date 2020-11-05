@@ -1,24 +1,31 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { withApollo } from '@services/apollo';
 import { useQuery } from '@apollo/react-hooks';
-import { FEATURED_LISTINGS } from '@queries/featuredListingsQuery';
+import { PROPERTY_TYPE } from '@queries/propertyTypeListingsQuery';
 
-import MainLayout from '@components/layouts/main-layout';
-import HeroSearch from '@components/hero-search';
+import PageLayout from '@components/layouts/page-layout';
 import HomeListings from '@components/home-listings';
+import CategoryBreadcrumbs from '@components/breadcrumbs/category-breadcrumb';
 import PageLoader from '@components/spinners/page-loader';
 
-const Index = () => {
-  const { loading, error, data } = useQuery(FEATURED_LISTINGS);
+const PropertyType = () => {
+  const router = useRouter();
+  const id = router.query.ref_key;
+
+  const { loading, error, data } = useQuery(PROPERTY_TYPE, {
+    variables: { id },
+  });
   if (error) return <p>There was an error processing your request</p>;
   if (loading) return <PageLoader />;
 
+  console.log(router, 'data');
   return (
     <>
       <Head>
         <title>
-          Home - RBBC Realty | Real state, Condominiums for sale, House for
-          sale, RFO, Rent to own
+          All {router.query.name} listings - RBBC Realty | Real state,
+          Condominiums for sale, House for sale, RFO, Rent to own
         </title>
 
         {/*  Google / Search Engine Tags  */}
@@ -57,16 +64,16 @@ const Index = () => {
           content="http://res.cloudinary.com/dsmxjpcpa/image/upload/v1600436993/rbbc-website_bbfom2.png"
         />
       </Head>
-      <MainLayout>
-        <HeroSearch />
+      <PageLayout>
+        <CategoryBreadcrumbs propertyType={router.query.name} />
         <HomeListings
-          listings={data.listings}
-          className="bg-gray-200 pb-20 pt-24"
-          title="Featured listings"
+          listings={data.listingType.listings}
+          className={'bg-white'}
+          title={`All ${router.query.name} listings`}
         />
-      </MainLayout>
+      </PageLayout>
     </>
   );
 };
 
-export default withApollo({ ssr: true })(Index);
+export default withApollo({ ssr: true })(PropertyType);

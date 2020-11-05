@@ -14,6 +14,10 @@ export const PROPERTY_DETAIL = gql`
       tags {
         name
       }
+      listing_types {
+        name
+        id
+      }
     }
   }
 `;
