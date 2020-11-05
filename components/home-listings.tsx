@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import PropertyCard from '@components/property-post/property-card';
 
 export default function HomeListings({ listings, className, title }) {

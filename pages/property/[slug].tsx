@@ -35,8 +35,6 @@ const PropertyDetail = () => {
     listing_types,
   } = data.listings[0];
 
-  console.log(data, 'data');
-
   return (
     <>
       <Head>

@@ -19,7 +19,6 @@ const PropertyType = () => {
   if (error) return <p>There was an error processing your request</p>;
   if (loading) return <PageLoader />;
 
-  console.log(router, 'data');
   return (
     <>
       <Head>

@@ -2,7 +2,11 @@ import Link from 'next/link';
 
 export default function PropertyCard({ item }) {
   return (
-    <Link href={`property/${item.slug}`}>
+    <Link
+      href=""
+      as={`http://localhost:3000/property/${item.slug}`}
+      prefetch={false}
+    >
       <div className="col-span-1 cursor-pointer">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg overflow-hidden">
           <img
