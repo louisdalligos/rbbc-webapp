@@ -3,8 +3,8 @@ import Link from 'next/link';
 export default function PropertyCard({ item }) {
   return (
     <Link
-      href=""
-      as={`http://localhost:3000/property/${item.slug}`}
+      href={`/property/${item.slug}`}
+      as={`/property/${item.slug}`}
       prefetch={false}
     >
       <div className="col-span-1 cursor-pointer">
