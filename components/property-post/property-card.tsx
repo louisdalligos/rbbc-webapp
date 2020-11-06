@@ -7,7 +7,7 @@ export default function PropertyCard({ item }) {
       as={`/property/${item.slug}`}
       prefetch={false}
     >
-      <div className="col-span-1 cursor-pointer">
+      <div className="md:col-span-1 cursor-pointer">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg overflow-hidden">
           <img
             src={
