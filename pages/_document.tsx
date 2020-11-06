@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { GA_TRACKING_ID } from "@utils/gtag";
+import { GA_TRACKING_ID } from '@utils/gtag';
 export default class MyDocument extends Document {
   render() {
     return (
@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
               gtag('config', '${GA_TRACKING_ID}', {
                 page_path: window.location.pathname,
               });
-          `
+          `,
             }}
           />
           <link rel="icon" href="/favicon.ico" />

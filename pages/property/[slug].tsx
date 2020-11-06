@@ -33,6 +33,7 @@ const PropertyDetail = () => {
     gallery,
     propertyDescription,
     listing_types,
+    floorPlansAndPricing,
   } = data.listings[0];
 
   return (
@@ -63,7 +64,10 @@ const PropertyDetail = () => {
           <div className="flex mt-4">
             <div className="h-auto content-column">
               <PropertyGallery gallery={gallery} />
-              <PropertyDetails description={propertyDescription} />
+              <PropertyDetails
+                description={propertyDescription}
+                features={floorPlansAndPricing}
+              />
             </div>
 
             <div className="sidebar hidden lg:block">

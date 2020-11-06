@@ -15,7 +15,7 @@ const location = {
   lng: 121.079228,
 };
 
-export default function PropertDetails({ description }) {
+export default function PropertDetails({ description, features }) {
   return (
     <Accordion allowMultipleExpanded preExpanded={['overview', 'details']}>
       <AccordionItem uuid="overview">
@@ -60,9 +60,33 @@ export default function PropertDetails({ description }) {
           </AccordionItemButton>
         </AccordionItemHeading>
         <AccordionItemPanel>
-          <div className="text-gray-900 text-sm leading-6">
+          <div className="text-gray-900 leading-7">
             {parse(`${description}`)}
           </div>
+        </AccordionItemPanel>
+      </AccordionItem>
+      <AccordionItem uuid="floorplans">
+        <AccordionItemHeading>
+          <AccordionItemButton>
+            <i className="lni lni-map-marker mr-2"></i>
+            Floor Plans &amp; Pricing
+          </AccordionItemButton>
+        </AccordionItemHeading>
+        <AccordionItemPanel>
+          <table className="table-auto text-gray-900">
+            <tbody>
+              {features &&
+                features.map((item) => {
+                  return (
+                    <tr>
+                      <td className="border px-4 py-2">Unit Type: <strong>{item.desc}</strong></td>
+                      <td className="border px-4 py-2">Area: <strong>{item.area}</strong></td>
+                      <td className="border px-4 py-2">Starting Price: <strong>{item.price}</strong></td>
+                    </tr>
+                  );
+                })}
+            </tbody>
+          </table>
         </AccordionItemPanel>
       </AccordionItem>
       <AccordionItem uuid="map">

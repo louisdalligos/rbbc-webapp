@@ -8,6 +8,7 @@ export const PROPERTY_DETAIL = gql`
       startingPrice
       address
       propertyDescription
+      floorPlansAndPricing
       gallery {
         url
       }
