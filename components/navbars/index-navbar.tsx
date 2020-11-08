@@ -10,7 +10,7 @@ const Navbar = ({ items }) => {
         <div className="container mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link href="/">
-              <a className="text-gray-800 text-sm font-bold leading-relaxed inline-block py-1 whitespace-no-wrap uppercase">
+              <a className="logo-link text-gray-800 text-sm font-bold leading-relaxed inline-block py-1 whitespace-no-wrap uppercase">
                 <img
                   src="/images/rbbc-logo.svg"
                   width="145"
@@ -81,6 +81,11 @@ const Navbar = ({ items }) => {
           </div>
         </div>
       </nav>
+      <style jsx>{`
+        .logo-link {
+          width: 145px
+        }
+      `}</style>
     </>
   );
 };

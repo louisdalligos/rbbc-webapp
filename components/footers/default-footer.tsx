@@ -104,8 +104,8 @@ export default function Footer() {
             </div>
           </div>
           <hr className="my-6 border-gray-400" />
-          <div className="flex justify-between w-full">
-            <div className="text-sm text-gray-600 font-semibold py-1 flex items-center ">
+          <div className="lg:flex lg:justify-between w-full">
+            <div className="text-sm text-gray-600 font-semibold py-1 flex items-center justify-center">
               Copyright © {new Date().getFullYear()} RBBC Realty Inc.
             </div>
             <div className="text-sm text-gray-600 font-semibold my-4 flex items-center justify-center">

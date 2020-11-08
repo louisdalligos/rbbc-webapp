@@ -36,7 +36,7 @@ export default function PropertDetails({
           </AccordionItemButton>
         </AccordionItemHeading>
         <AccordionItemPanel>
-          <div className="flex text-sm">
+          <div className="lg:flex text-sm">
             <div className="flex-1 p-2 text-center">
               Property Type: <strong>Townhouse</strong>
             </div>
@@ -52,7 +52,7 @@ export default function PropertDetails({
             <div className="flex-1 p-2 text-center">
               Area: <strong>{area} sqm</strong>
             </div>
-            <div className="flex-1 p-2">
+            <div className="flex-1 p-2 text-center">
               Year built: <strong>{year}</strong>
             </div>
           </div>
