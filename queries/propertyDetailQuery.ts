@@ -14,6 +14,9 @@ export const PROPERTY_DETAIL = gql`
       floorPlansAndPricing
       gallery {
         url
+        width
+        height
+        name
       }
       tags {
         name

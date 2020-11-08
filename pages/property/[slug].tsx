@@ -4,6 +4,7 @@ import { withApollo } from '@services/apollo';
 import { useQuery } from '@apollo/react-hooks';
 import { PROPERTY_DETAIL } from '@queries/propertyDetailQuery';
 import { metaDescription } from '@utils/constants';
+import { NextSeo } from 'next-seo';
 
 // Components
 import PageLayout from '@components/layouts/page-layout';
@@ -44,22 +45,32 @@ const PropertyDetail = () => {
     yearBuilt,
   } = data.listings[0];
 
+
+  console.log(gallery, 'gallery')
+
   return (
     <>
-      <Head>
-        <title>
-          {title} - RBBC Realty | Real state, Condominiums for sale, House for
-          sale, RFO, Rent to own
-        </title>
-        <meta name="description" content={metaDescription}></meta>
+      <NextSeo
+        title={`${title} - RBBC Realty | Real state, Condominiums for sale, House for
+        sale, RFO, Rent to own`}
+        description={metaDescription}
+        canonical="https://www.rbbcrealty.com/"
+        openGraph={{
+          url: 'https://www.url.ie/a',
+          title: `${title}`,
+          description: `${metaDescription}`,
+          images: [
+            {
+              url: `${gallery[0].url}`,
+              width: gallery[0].width,
+              height: gallery[0].height,
+              alt: `${gallery[0].name}`,
+            },
+          ],
+          site_name: 'RBBC Realty',
+        }}
+      />
 
-        <meta property="og:title" content={title} key="ogtitle" />
-        <meta
-          property="og:description"
-          content={metaDescription}
-          key="ogdesc"
-        />
-      </Head>
       <PageLayout>
         <section className="container mx-auto h-full">
           <PropertyHeading
