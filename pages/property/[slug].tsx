@@ -25,6 +25,8 @@ const PropertyDetail = () => {
   if (error) return <p>There was an error processing your request</p>;
   if (loading) return <PageLoader />;
 
+  console.log(data.listings[0], 'data query result');
+
   const {
     title,
     address,
@@ -34,6 +36,12 @@ const PropertyDetail = () => {
     propertyDescription,
     listing_types,
     floorPlansAndPricing,
+    bed,
+    bath,
+    area,
+    longitude,
+    latitude,
+    yearBuilt,
   } = data.listings[0];
 
   return (
@@ -67,6 +75,13 @@ const PropertyDetail = () => {
               <PropertyDetails
                 description={propertyDescription}
                 features={floorPlansAndPricing}
+                bed={bed}
+                bath={bath}
+                area={area}
+                latitude={latitude}
+                longitude={longitude}
+                year={yearBuilt}
+                address={address}
               />
             </div>
 

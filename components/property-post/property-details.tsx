@@ -9,13 +9,23 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 
-const location = {
-  address: 'Novaliches, Quezon City, Metro Manila',
-  lat: 14.681537,
-  lng: 121.079228,
-};
+export default function PropertDetails({
+  description,
+  features,
+  bed,
+  bath,
+  area,
+  latitude,
+  longitude,
+  year,
+  address,
+}) {
+  const location = {
+    address: address,
+    lat: parseFloat(longitude),
+    lng: parseFloat(latitude),
+  };
 
-export default function PropertDetails({ description, features }) {
   return (
     <Accordion allowMultipleExpanded preExpanded={['overview', 'details']}>
       <AccordionItem uuid="overview">
@@ -31,23 +41,19 @@ export default function PropertDetails({ description, features }) {
               Property Type: <strong>Townhouse</strong>
             </div>
             <div className="flex-1 p-2 text-center">
-              <i className="fas fa-bed mr-1 text-green-500"></i>
-              <strong>3</strong>
+              Bed: <strong>{bed}</strong>
             </div>
             <div className="flex-1 p-2 text-center">
-              <i className="fas fa-bath mr-1 text-green-500"></i>
-              <strong>3</strong>
+              Toilet &amp; bath: <strong>{bath}</strong>
             </div>
             <div className="flex-1 p-2 text-center">
-              <i className="fas fa-warehouse mr-1 text-green-500"></i>
-              <strong>2</strong>
+              Garage: <strong>{bath}</strong>
             </div>
             <div className="flex-1 p-2 text-center">
-              <i className="fas fa-map-marked-alt mr-1 text-green-500"></i>
-              <strong>127 sqm</strong>
+              Area: <strong>{area} sqm</strong>
             </div>
             <div className="flex-1 p-2">
-              Year built: <strong>2020</strong>
+              Year built: <strong>{year}</strong>
             </div>
           </div>
         </AccordionItemPanel>
@@ -79,9 +85,15 @@ export default function PropertDetails({ description, features }) {
                 features.map((item) => {
                   return (
                     <tr>
-                      <td className="border px-4 py-2">Unit Type: <strong>{item.desc}</strong></td>
-                      <td className="border px-4 py-2">Area: <strong>{item.area}</strong></td>
-                      <td className="border px-4 py-2">Starting Price: <strong>{item.price}</strong></td>
+                      <td className="border px-4 py-2">
+                        Unit Type: <strong>{item.desc}</strong>
+                      </td>
+                      <td className="border px-4 py-2">
+                        Area: <strong>{item.area}</strong>
+                      </td>
+                      <td className="border px-4 py-2">
+                        Starting Price: <strong>{item.price}</strong>
+                      </td>
                     </tr>
                   );
                 })}
@@ -97,7 +109,7 @@ export default function PropertDetails({ description, features }) {
           </AccordionItemButton>
         </AccordionItemHeading>
         <AccordionItemPanel>
-          <PropertyMap location={location} zoomLevel={16} />
+          <PropertyMap location={location} zoomLevel={17} />
         </AccordionItemPanel>
       </AccordionItem>
     </Accordion>

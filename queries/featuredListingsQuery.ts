@@ -7,6 +7,9 @@ export const FEATURED_LISTINGS = gql`
       title
       slug
       startingPrice
+      bed
+      bath
+      area
       gallery {
         formats
       }

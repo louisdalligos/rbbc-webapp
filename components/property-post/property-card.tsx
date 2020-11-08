@@ -26,7 +26,7 @@ export default function PropertyCard({ item }) {
                 {item.listing_types[0].name}
               </span>
               <div className="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">
-                2 beds &bull; 3 baths &bull; 127 sqm
+                {item.bed} beds &bull; {item.bath} baths &bull; {item.area} sqm
               </div>
             </div>
             <h4 className="font-semibold text-lg leading-tight truncate">

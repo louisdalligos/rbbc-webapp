@@ -7,6 +7,9 @@ export const PROPERTY_DETAIL = gql`
       title
       startingPrice
       address
+      bed
+      bath
+      area
       propertyDescription
       floorPlansAndPricing
       gallery {
@@ -19,6 +22,9 @@ export const PROPERTY_DETAIL = gql`
         name
         id
       }
+      latitude
+      longitude
+      yearBuilt
     }
   }
 `;

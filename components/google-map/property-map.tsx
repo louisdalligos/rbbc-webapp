@@ -2,7 +2,7 @@ import GoogleMapReact from 'google-map-react';
 
 const LocationPin = ({ text }) => (
   <div className="pin">
-    <i className="lni lni-map-marker text-4xl font-bold text-green-600"></i>
+    <img src="/images/200px-Map_pin_icon_green.svg.png" width="40" />
     <p className="pin-text bg-white border p-2 w-1/6 text-center text-gray-700">
       {text}
     </p>
