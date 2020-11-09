@@ -72,7 +72,7 @@ export default function Footer() {
                     </li>
                   </ul>
                 </div>
-                <div className="w-full lg:w-4/12 px-4">
+                <div className="w-full lg:w-4/12 px-4 xl:px-0">
                   <span className="block uppercase text-gray-600 text-sm font-semibold mb-2">
                     Other Resources
                   </span>
@@ -104,7 +104,7 @@ export default function Footer() {
             </div>
           </div>
           <hr className="my-6 border-gray-400" />
-          <div className="lg:flex lg:justify-between w-full">
+          <div className="lg:flex lg:justify-between w-full px-4 xl:px-0">
             <div className="text-sm text-gray-600 font-semibold py-1 flex items-center justify-center">
               Copyright © {new Date().getFullYear()} RBBC Realty Inc.
             </div>

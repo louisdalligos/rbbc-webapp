@@ -12,7 +12,7 @@ const PageLayout = ({ children }) => {
   return (
     <>
       <IndexNavbar items={nav} />
-      <main className="page-body with-container">{children}</main>
+      <main className="page-body with-container px-4 xl:px-0">{children}</main>
       <Footer />
     </>
   );
