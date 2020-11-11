@@ -10,7 +10,7 @@ export default function PropertyHeading({
   propertyType,
 }) {
   return (
-    <div className="px-4 lg:px-0 mb-5">
+    <div className="mb-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
         <div className="">
           <DefaultBreadcrumbs title={title} propertyType={propertyType} />

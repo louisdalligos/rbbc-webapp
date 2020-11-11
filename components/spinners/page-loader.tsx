@@ -11,6 +11,7 @@ export default function PageLoader() {
       <style jsx>{`
         .spinner {
           top: 50%;
+          left: -15px;
         }
       `}</style>
     </>

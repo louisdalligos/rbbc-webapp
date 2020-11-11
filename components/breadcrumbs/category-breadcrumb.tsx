@@ -5,7 +5,7 @@ export default function CategoryBreadcrumbs({ propertyType }) {
 
   return (
     <nav className="container mx-auto mb-4">
-      <ol className="list-reset flex text-gray-800 text-sm">
+      <ol className="list-reset flex text-gray-800 text-xs">
         <li>
           <Link href="/">
             <a className="text-green-500">Home</a>

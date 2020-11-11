@@ -7,10 +7,10 @@ export default function Breadcrumbs({ title, propertyType }) {
 
   return (
     <nav className="w-full">
-      <ol className="list-reset flex text-gray-800 text-sm">
+      <ol className="list-reset flex text-gray-800 text-xs">
         <li>
           <Link href="/">
-            <a className="text-green-500">Home</a>
+            <a className="text-green-500 ">Home</a>
           </Link>
         </li>
         <li>
@@ -29,7 +29,7 @@ export default function Breadcrumbs({ title, propertyType }) {
           </Link>
         </li>
         <li>
-          <span className="mx-2 text-sm">
+          <span className="mx-2">
             <i className="lni lni-chevron-right text-xs"></i>
           </span>
         </li>
