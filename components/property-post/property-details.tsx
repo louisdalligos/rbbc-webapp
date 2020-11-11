@@ -21,7 +21,9 @@ export default function PropertDetails({
   address,
 }) {
   const location = {
-    address: address ? address : 'Elliptical Rd, Diliman, Quezon City, Metro Manila',
+    address: address
+      ? address
+      : 'Elliptical Rd, Diliman, Quezon City, Metro Manila',
     lat: parseFloat(longitude ? longitude : 14.6635826),
     lng: parseFloat(latitude ? latitude : 121.0369535),
   };

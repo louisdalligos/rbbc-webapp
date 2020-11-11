@@ -1,9 +1,20 @@
+import React from 'react';
 import { Formik, Field, Form } from 'formik';
 import InputIcon from '@components/inputs/input-icon';
 import InputError from '@components/inputs/input-error';
 import { inquiryFormValidation } from '@utils/validation';
 
 export default function InquiryFormSidebar() {
+  const [error, setError] = React.useState(null);
+  const [success, setSuccess] = React.useState(null);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setError(null);
+      setSuccess(null);
+    }, 3000);
+  }, [error, success]);
+
   return (
     <Formik
       initialValues={{
@@ -13,19 +24,31 @@ export default function InquiryFormSidebar() {
         message: 'I am interested in 2637 22nd St.',
       }}
       validationSchema={inquiryFormValidation}
-      onSubmit={(values, { setSubmitting, resetForm }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-          resetForm({
-            values: {
-              fullname: '',
-              email: '',
-              phone: '',
-              message: '',
-            },
-          });
-        }, 400);
+      onSubmit={async (values, { setSubmitting, resetForm }) => {
+        const data = await fetch('/api/send-inquiry', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: values.fullname,
+            email: values.email,
+            phone: values.phone,
+            message: values.message,
+          }),
+        });
+
+        data.status === 400
+          ? setError('Error sending. Please try again')
+          : setSuccess('Your message has been sent');
+        // clear our form
+        setSubmitting(false);
+        resetForm({
+          values: {
+            fullname: '',
+            email: '',
+            phone: '',
+            message: values.message,
+          },
+        });
       }}
     >
       {({ values, isSubmitting, errors, handleChange }) => (
@@ -74,6 +97,9 @@ export default function InquiryFormSidebar() {
           >
             {isSubmitting ? 'Submitting...' : 'Send Inquiry'}
           </button>
+
+          <p className="text-sm text-green-600">{success && success}</p>
+          <p className="text-sm text-red-600">{error && error}</p>
         </Form>
       )}
     </Formik>

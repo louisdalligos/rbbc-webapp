@@ -83,7 +83,7 @@ const Navbar = ({ items }) => {
       </nav>
       <style jsx>{`
         .logo-link {
-          width: 145px
+          width: 145px;
         }
       `}</style>
     </>

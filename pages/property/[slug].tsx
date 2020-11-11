@@ -45,8 +45,7 @@ const PropertyDetail = () => {
     yearBuilt,
   } = data.listings[0];
 
-
-  console.log(gallery, 'gallery')
+  console.log(gallery, 'gallery');
 
   return (
     <>
