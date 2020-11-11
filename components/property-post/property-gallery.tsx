@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import classNames from 'classnames';
 import InquiryFormFooter from '@components/forms/inquiry-form-footer';
 
-export default function PropertyGallery({ gallery }) {
+export default function PropertyGallery({ gallery, propertyTitle }) {
   const [hideGallery, setHideGallery] = useState(true);
 
   const arrowStyles: CSSProperties = {
@@ -95,7 +95,7 @@ export default function PropertyGallery({ gallery }) {
         </div>
 
         <div className="vertical-gallery relative h-full overflow-scroll pb-10">
-          <div className="flex flex-col w-4/6 mx-auto">
+          <div className="flex flex-col w-5/6 lg:w-4/6 mx-auto">
             {gallery && gallery.length
               ? gallery.map((item, x) => {
                   return (
@@ -106,8 +106,11 @@ export default function PropertyGallery({ gallery }) {
                 })
               : null}
 
-            <div className="m-20 mx-auto bg-gray-300 p-8 text-center">
-              <InquiryFormFooter title="More about this property" />
+            <div className="m-20 mx-auto bg-gray-300 p-4 lg:w-2/6 text-center">
+              <InquiryFormFooter
+                title="More about this property"
+                propertyTitle={propertyTitle}
+              />
             </div>
           </div>
         </div>

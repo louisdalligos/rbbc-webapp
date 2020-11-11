@@ -26,8 +26,6 @@ const PropertyDetail = () => {
   if (error) return <p>There was an error processing your request</p>;
   if (loading) return <PageLoader />;
 
-  console.log(data.listings[0], 'data query result');
-
   const {
     title,
     address,
@@ -44,8 +42,6 @@ const PropertyDetail = () => {
     latitude,
     yearBuilt,
   } = data.listings[0];
-
-  console.log(gallery, 'gallery');
 
   return (
     <>
@@ -81,7 +77,7 @@ const PropertyDetail = () => {
           />
           <div className="flex mt-4">
             <div className="h-auto content-column">
-              <PropertyGallery gallery={gallery} />
+              <PropertyGallery gallery={gallery} propertyTitle={title} />
               <PropertyDetails
                 description={propertyDescription}
                 features={floorPlansAndPricing}
@@ -100,7 +96,7 @@ const PropertyDetail = () => {
                 <h4 className="text-lg text-center mb-2">
                   More about this property
                 </h4>
-                <InquiryFormSidebar />
+                <InquiryFormSidebar propertyTitle={title} />
               </div>
 
               <ListingAuthor />

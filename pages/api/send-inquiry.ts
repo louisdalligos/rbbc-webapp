@@ -2,11 +2,13 @@ import { NextApiRequest, NextApiResponse } from 'next';
 const sgMail = require('@sendgrid/mail');
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  sgMail.setApiKey(process.env.NEXT_PUBLICK_SENDGRID_API_KEY);
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const { name, email, phone, message } = req.body;
 
   const content = {
-    to: 'sales@rbbcrealty.com',
+    to: process.env.CONTACT_EMAIL,
+    cc: process.env.CONTACT_CC_EMAIL,
+    bcc: process.env.CONTACT_BCC_EMAIL,
     from: 'sales@rbbcrealty.com',
     subject: `New Message From - ${name} | ${email} | ${phone}`,
     text: message,

@@ -1,32 +1,59 @@
+import React from 'react';
 import Link from 'next/link';
 import { Formik, Field, Form } from 'formik';
 import InputIcon from '@components/inputs/input-icon';
 import InputError from '@components/inputs/input-error';
 import { inquiryFormValidation } from '@utils/validation';
 
-export default function InquiryFormFooter({ title }) {
+export default function InquiryFormFooter({ title, propertyTitle }) {
+  const [error, setError] = React.useState(null);
+  const [success, setSuccess] = React.useState(null);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setError(null);
+      setSuccess(null);
+    }, 3000);
+  }, [error, success]);
+
   return (
     <Formik
       initialValues={{
         fullname: '',
         email: '',
         phone: '',
-        message: 'I am interested in 2637 22nd St.',
+        message: `I am interested in ${propertyTitle}`,
       }}
       validationSchema={inquiryFormValidation}
-      onSubmit={(values, { setSubmitting, resetForm }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
+      onSubmit={async (values, { setSubmitting, resetForm }) => {
+        const data = await fetch('/api/send-inquiry', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: values.fullname,
+            email: values.email,
+            phone: values.phone,
+            message: values.message,
+          }),
+        });
+
+        data.status === 400
+          ? setError('Error sending. Please try again')
+          : setSuccess('Your message has been sent');
+
+        setSubmitting(false);
+
+        // if success, clear our form
+        if (data.status === 200) {
           resetForm({
             values: {
               fullname: '',
               email: '',
               phone: '',
-              message: '',
+              message: values.message,
             },
           });
-        }, 400);
+        }
       }}
     >
       {({ values, isSubmitting, errors, handleChange }) => (
@@ -76,6 +103,9 @@ export default function InquiryFormFooter({ title }) {
           >
             {isSubmitting ? 'Submitting...' : 'Send Inquiry'}
           </button>
+
+          <p className="text-sm text-green-600">{success && success}</p>
+          <p className="text-sm text-red-600">{error && error}</p>
 
           <small className="text-gray-700">
             By submitting, you agree to our{' '}

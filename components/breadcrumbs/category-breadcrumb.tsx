@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 export default function CategoryBreadcrumbs({ propertyType }) {
-  console.log(propertyType, 'type');
   const formatType = `${propertyType[0].toUpperCase()}${propertyType.slice(1)}`;
 
   return (

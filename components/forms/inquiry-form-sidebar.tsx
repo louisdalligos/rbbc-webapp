@@ -4,7 +4,7 @@ import InputIcon from '@components/inputs/input-icon';
 import InputError from '@components/inputs/input-error';
 import { inquiryFormValidation } from '@utils/validation';
 
-export default function InquiryFormSidebar() {
+export default function InquiryFormSidebar({ propertyTitle }) {
   const [error, setError] = React.useState(null);
   const [success, setSuccess] = React.useState(null);
 
@@ -21,7 +21,7 @@ export default function InquiryFormSidebar() {
         fullname: '',
         email: '',
         phone: '',
-        message: 'I am interested in 2637 22nd St.',
+        message: `I am interested in ${propertyTitle}`,
       }}
       validationSchema={inquiryFormValidation}
       onSubmit={async (values, { setSubmitting, resetForm }) => {
@@ -39,16 +39,20 @@ export default function InquiryFormSidebar() {
         data.status === 400
           ? setError('Error sending. Please try again')
           : setSuccess('Your message has been sent');
-        // clear our form
+
         setSubmitting(false);
-        resetForm({
-          values: {
-            fullname: '',
-            email: '',
-            phone: '',
-            message: values.message,
-          },
-        });
+
+        // if success, clear our form
+        if (data.status === 200) {
+          resetForm({
+            values: {
+              fullname: '',
+              email: '',
+              phone: '',
+              message: values.message,
+            },
+          });
+        }
       }}
     >
       {({ values, isSubmitting, errors, handleChange }) => (
