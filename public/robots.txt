@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://rbbcrealty.com/sitemap.xml
